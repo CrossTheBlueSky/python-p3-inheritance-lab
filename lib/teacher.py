@@ -6,5 +6,10 @@ import random
 
 class Teacher(User):
 
+    def __init__(self, first, last):
+        self.knowledge = ["History", "Maths"]
+        super().__init__(first, last)
+        
+
     def teach(self):
-        pass
+        return random.choice(self.knowledge)
